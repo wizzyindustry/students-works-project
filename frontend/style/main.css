@@ -1,0 +1,266 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* header style */
+.header {
+    background: #111;
+    color: #fff;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* .header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+} */
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.header .navbar ul li {
+    padding: 10px;
+    color: #fff;
+}
+
+.header .navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* 
+.header .auth {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.header .auth ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.header .auth ul li {
+    padding: 10px;
+    color: #fff;
+    background-color: #6c757d;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.header .auth ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+} */
+
+/* aside bar styling */
+aside {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+    height: 90%;
+    background-color: #f5f5;
+}
+
+aside nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+}
+
+aside nav ul li {
+    list-style: none;
+    padding: 10px;
+}
+
+aside nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 2rem;
+}
+
+/* @media (max-width: 768px) {
+    header {
+        width: 80%;
+        flex-direction: row;
+        height: 10%;
+        margin: auto -10px auto 110px;
+    }
+
+    .nav {
+        display: none;
+        width: 100%;
+    }
+
+    /* .auth {
+        display: none;
+    } 
+
+    .nav nav ul {
+        flex-direction: column;
+        height: 50%;
+    }
+
+    aside {
+        display: block;
+        height: 80vh;
+        width: 80%;
+    }
+
+    aside nav ul {
+        flex-direction: column;
+    }
+} */
+
+/* main body style */
+/* main {
+    width: 80%;
+    height: 90%;
+    background-color: #fff;
+    padding: 20px;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+main section h2 {
+    font-size: 3rem;
+}
+
+main section p {
+    font-size: 2rem;
+} */
+
+.main-container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container .card {
+    width: 100%;
+    height: 290px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f5f5;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.card h2 {
+    font-size: 16px;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.card a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    background-color: #0d6efd;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    height: 10%;
+    background-color: #333;
+}
+
+footer p {
+    color: #fff;
+    font-size: 2rem;
+}

@@ -1,0 +1,19 @@
+# Robots.txt for Student Academic Materials Platform
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /login
+Disallow: /register
+Disallow: /profile
+Disallow: /settings
+Disallow: /my-uploads
+Disallow: /bookmarks
+Disallow: /downloads
+Disallow: /upload
+Disallow: /material/*/edit
+
+# Sitemap
+Sitemap: https://materials.udom.ac.tz/sitemap.xml
