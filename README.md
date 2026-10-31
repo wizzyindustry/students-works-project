@@ -14,9 +14,9 @@ A web-based platform for university students to share, discover, and download ac
 
 ## Tech Stack
 
-- **Frontend**: Vanilla JavaScript (ES Modules), Bootstrap 5, Vite
-- **Backend**: Node.js, Express.js
-- **Database**: PostgreSQL
+- **Frontend**: React 19, Vite, React Router DOM 7, Lucide Icons, Modern Glassmorphism CSS Design System
+- **Backend**: Node.js, Express.js (REST API on port 5000 with `/api` proxy)
+- **Database**: PostgreSQL (Supabase / Local)
 - **File Storage**: Local filesystem (configurable for cloud)
 - **Deployment**: Docker, nginx
 

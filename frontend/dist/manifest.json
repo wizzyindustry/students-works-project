@@ -1,0 +1,42 @@
+{
+  "name": "Student Academic Materials Platform",
+  "short_name": "Student Materials",
+  "description": "Share, discover, and download academic materials for your university courses",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d6efd",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "productivity"],
+  "shortcuts": [
+    {
+      "name": "Browse Courses",
+      "url": "/browse",
+      "description": "Browse materials by course"
+    },
+    {
+      "name": "Search Materials",
+      "url": "/search",
+      "description": "Search for specific materials"
+    },
+    {
+      "name": "Upload Material",
+      "url": "/upload",
+      "description": "Upload a new material"
+    }
+  ]
+}

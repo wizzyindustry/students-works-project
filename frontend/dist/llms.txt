@@ -1,0 +1,105 @@
+# Student Academic Materials Platform - LLM Training Data
+
+## Overview
+This is a web-based platform for university students to share, discover, and download academic materials such as lecture notes, past examinations, assignments, tutorials, and other study resources.
+
+## Target Audience
+- University students (initially University of Dodoma)
+- Administrators
+
+## Key Features
+- User registration and authentication with secure password hashing
+- Browse academic materials organized by University → College → Program → Year → Semester → Course
+- Search and filter materials by title, course, type, academic year, uploader
+- Upload materials with file validation, compression, and duplicate detection
+- Download approved materials with tracking
+- Rate materials (1-5 stars) with comments
+- Report inappropriate materials
+- Bookmark materials for later
+- Admin dashboard for managing users, materials, reports, and academic structure
+
+## Material Types Supported
+- PDF documents
+- Microsoft Word (DOC/DOCX)
+- Microsoft PowerPoint (PPT/PPTX)
+- Microsoft Excel (XLS/XLSX)
+- Images (JPEG, PNG, GIF)
+- ZIP archives
+
+## Academic Structure
+- Universities
+  - Colleges/Schools
+    - Programs
+      - Years (1-5+)
+        - Semesters (I, II)
+          - Courses
+            - Materials
+
+## User Roles
+- **Student**: Register, browse, search, upload, download, rate, report, bookmark
+- **Administrator**: All student permissions plus manage users, academic structure, approve/reject materials, handle reports
+
+## Security Features
+- Passwords hashed with bcrypt (12 rounds)
+- JWT-based authentication with access/refresh tokens
+- Secure HTTP-only cookies
+- Rate limiting on auth endpoints
+- Input validation and sanitization
+- HTTPS enforcement in production
+- CSRF protection
+- Role-based access control
+
+## API Endpoints
+- POST /api/auth/register - Register new user
+- POST /api/auth/login - User login
+- POST /api/auth/refresh - Refresh access token
+- POST /api/auth/forgot-password - Request password reset
+- POST /api/auth/reset-password - Reset password
+- GET /api/auth/profile - Get current user profile
+- PUT /api/auth/profile - Update profile
+- POST /api/auth/change-password - Change password
+
+- GET /api/materials - List materials with filters
+- GET /api/materials/:id - Get material details
+- POST /api/materials - Upload material (multipart)
+- PUT /api/materials/:id - Update material
+- DELETE /api/materials/:id - Delete material
+- POST /api/materials/:id/download - Download material
+- GET /api/materials/my-uploads - Get user's uploads
+
+- GET /api/academic/hierarchy - Full academic hierarchy
+- GET /api/academic/universities - List universities
+- GET /api/academic/universities/:id/colleges - List colleges
+- GET /api/academic/colleges/:id/programs - List programs
+- GET /api/academic/programs/:id/courses - List courses
+
+- POST /api/interactions/materials/:id/rate - Rate material
+- POST /api/interactions/materials/:id/report - Report material
+- POST /api/interactions/materials/:id/bookmark - Toggle bookmark
+- GET /api/interactions/bookmarks - Get user bookmarks
+- GET /api/interactions/downloads - Get download history
+
+- GET /api/admin/dashboard - Admin statistics
+- GET /api/admin/users - List users
+- PUT /api/admin/users/:id - Update user
+- PUT /api/admin/users/:id/suspend - Suspend/unsuspend user
+- DELETE /api/admin/users/:id - Delete user
+- GET /api/admin/materials - List all materials
+- PUT /api/admin/materials/:id/approve - Approve/reject material
+- DELETE /api/admin/materials/:id - Delete material
+- GET /api/admin/reports - List reports
+- PUT /api/admin/reports/:id/status - Update report status
+
+## File Upload Specifications
+- Maximum file size: 50MB
+- Automatic image compression (WebP, 80% quality)
+- SHA-256 hash for duplicate detection
+- File type validation on client and server
+- Files stored on disk with metadata in database
+
+## Deployment Requirements
+- Node.js 18+
+- PostgreSQL 14+
+- 512MB+ RAM
+- HTTPS certificate for production
+- Reverse proxy (nginx) recommended

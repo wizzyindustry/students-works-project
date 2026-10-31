@@ -3,6 +3,7 @@ import { interactionController } from '../controllers/interactionController.js';
 import { authenticateToken } from '../middleware/auth.js';
 import { validate } from '../middleware/validation.js';
 import { rateMaterialValidation, reportMaterialValidation, materialIdParam } from '../validators/material.js';
+import { uuidParam } from '../validators/academic.js';
 
 const router = Router();
 

@@ -1,4 +1,5 @@
 import { body, param, query } from 'express-validator';
+export { uuidParam } from './academic.js';
 
 export const updateUserValidation = [
   body('fullName')
